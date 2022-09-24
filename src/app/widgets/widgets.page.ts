@@ -33,12 +33,7 @@ export class WidgetsPage implements OnInit {
       this.userPreferencesList = [];
       const userPreferences = preferences.split("");
       userPreferences.forEach(element => {
-        let item = {
-          name: widgetList[element].name,
-          desc: widgetList[element].desc,
-          img: this.getImgURL(widgetList[element].name),
-        }
-        this.userPreferencesList.push(item);
+        this.userPreferencesList.push(widgetList[element]);
       });
     }
     //   }
@@ -46,12 +41,12 @@ export class WidgetsPage implements OnInit {
     console.log("this.userPreferencesList:", this.userPreferencesList);
   }
 
-  getImgURL(name) {
-    let img = name.trim().toLowerCase();
-    img = img.split(" ").join("");
-    img = "../../assets/icon/" + img + '.png';
-    return img;
-  }
+  // getImgURL(name) {
+  //   let img = name.trim().toLowerCase();
+  //   img = img.split(" ").join("");
+  //   img = "../../assets/icon/" + img + '.png';
+  //   return img;
+  // }
 
   openWidget(widgetName) {
     this.isListView = false;

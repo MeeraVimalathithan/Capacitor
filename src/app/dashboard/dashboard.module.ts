@@ -8,6 +8,7 @@ import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
 import { WidgetsPageModule } from '../widgets/widgets.module';
+import { PreferencesPageModule } from '../preferences/preferences.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { WidgetsPageModule } from '../widgets/widgets.module';
     IonicModule,
     DashboardPageRoutingModule,
     WidgetsPageModule,
+    PreferencesPageModule
     // WidgetsPage 
   ],
   declarations: [DashboardPage]

@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'FundsTransfer',
     loadChildren: () => import('./fund-transfer/fund-transfer.module').then( m => m.FundTransferPageModule)
+  },
+  {
+    path: 'preferences',
+    loadChildren: () => import('./preferences/preferences.module').then( m => m.PreferencesPageModule)
   }
 ];
 

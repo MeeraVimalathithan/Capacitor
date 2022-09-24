@@ -6,7 +6,12 @@
         </ion-header>
         <ion-content class="ion-padding">
             <div style="color: black;font-size:0.8rem;opacity: 0.8;">
-                Edit Preference
+                <span (click)="setShowPreferences()">
+                    Edit Preference
+                </span>
+            </div>
+            <div style="color: black;font-size:0.8rem;opacity: 0.8;">
+                Go to home page
             </div>
         </ion-content>
     </ion-menu>
@@ -28,7 +33,12 @@
             <ion-button expand="full" (click)="stopRecognition()" *ngIf="recording">Stop speech recognition
             </ion-button> -->
             <!-- <ion-button expand="full" (click)="speakText()" *ngIf="!recording">Speak </ion-button> -->
-            <app-widgets></app-widgets>
+            <ng-container *ngIf="showPreferences">
+                <app-preferences></app-preferences>
+            </ng-container>
+            <ng-container *ngIf="!showPreferences">
+                <app-widgets></app-widgets>
+            </ng-container>
         </ion-content>
     </div>
 </ion-app>

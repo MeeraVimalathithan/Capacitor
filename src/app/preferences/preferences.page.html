@@ -1,0 +1,52 @@
+<br><br>
+<ion-slides pager="true" [options]="slideOpts">
+    <ion-slide style="padding: 0 5px;">
+        <ion-card style="padding-bottom: 20%;">
+            <ion-card-content>
+                <img src="../../assets/icon/star.png">
+
+                <p style="padding-top: 20%;">
+                    The <b>ionic conference app</b>.
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+    <ion-slide style="padding: 0 5px;">
+        <ion-card style="background-color: transparent;box-shadow: none;">
+            <ng-container *ngFor="let preference of userPreferences;let i =index">
+                <ion-card (click)="setPreference(i)" *ngIf="preference.name" [style.background]="getBgColor(i)">
+                    <ion-card-content>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="2">
+                                    <ion-img [src]="preference.img" style="width: 40px;"></ion-img>
+                                </ion-col>
+                                <ion-col size="10" style="text-align: left;">
+                                    <div class="cardStyle">
+                                        <div style="font-size: 0.8rem;"><b>{{preference.name}}</b></div>
+                                        <div style="font-size: 0.6rem;">{{preference.desc}}</div>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+                <br>
+            </ng-container>
+        </ion-card>
+    </ion-slide>
+    <ion-slide style="padding: 0 5px;" *ngIf="userPreferencesList.length">
+        <ion-card style="padding-bottom: 20%; ">
+            <ion-card-content>
+                <img src="../../assets/icon/mobile.png ">
+
+                <p style="padding-top: 20%; ">
+                    Thank you for choosing your <b>preferences</b>.
+                </p>
+                <p style="padding-top: 20%;text-decoration: underline;" (click)="gotoDashboard()">
+                    <b>Go to Home page</b>.
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+</ion-slides>

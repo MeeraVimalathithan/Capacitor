@@ -12,6 +12,7 @@ export class DashboardPage implements OnInit {
 
   myText = "Hello Meera";
   recording = false;
+  showPreferences = false;
 
   constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {
     SpeechRecognition.requestPermission();
@@ -63,5 +64,10 @@ export class DashboardPage implements OnInit {
   async stopRecognition() {
     this.recording = false;
     await SpeechRecognition.stop();
+  }
+
+  setShowPreferences() {
+    alert("setShowPreferences")
+    this.showPreferences = true;
   }
 }
