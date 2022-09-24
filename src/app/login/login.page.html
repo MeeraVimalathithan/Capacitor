@@ -1,0 +1,22 @@
+<ion-content>
+    <div class="flex-center" style="height: 96%;">
+        <div style="text-align: center;width: 70%;">
+            <div style="padding-bottom: 10%;">
+                <img src="../../assets/icon/favicon.png">
+            </div>
+            <div>
+                <form #form="ngForm" (ngSubmit)="register(form)">
+                    <ion-input name="username" placeholder="Username" ngModel required></ion-input>
+                    <br>
+                    <ion-input name="password" type="Password" placeholder="Password" ngModel required></ion-input>
+                    <br>
+                    <ion-button type="submit">Sign On</ion-button>
+                </form>
+                <div class="bottomDeets">New User | Forgot User ID or Password</div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;font-size: 0.7rem;opacity: 0.7;color: white;">
+        Copyright © Topgun Maveric Inc.
+    </div>
+</ion-content>

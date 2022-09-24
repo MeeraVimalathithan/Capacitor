@@ -1,0 +1,45 @@
+ion-card-title {
+    text-align: center;
+    font-size: 1rem;
+}
+
+ion-card {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    --background: white;
+}
+
+ion-card-content {
+    padding: 0;
+}
+
+ion-col {
+    // font-size: 0.7rem;
+    padding: 0;
+}
+
+ion-img {
+    width: 50px;
+}
+
+.cardStyle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+}
+
+ion-button {
+    width: 100%;
+    --background: #1e4681;
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+
+// ion-card {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100%;
+// }
